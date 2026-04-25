@@ -75,9 +75,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'octofit_tracker.wsgi.application'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
@@ -88,11 +88,15 @@ DATABASES = {
         }
     }
 }
+
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_METHODS = ['DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT']
+
+# Custom user model
+AUTH_USER_MODEL = 'octofit_tracker.User'
 
 
 # Password validation
